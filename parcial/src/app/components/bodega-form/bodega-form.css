@@ -1,0 +1,15 @@
+.form {
+  display: grid;
+  gap: 8px;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+}
+
+.mensaje {
+  margin: 8px 0 0;
+}

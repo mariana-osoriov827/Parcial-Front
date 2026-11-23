@@ -1,0 +1,5 @@
+<main class="page">
+  <h1>Bodegas y productos</h1>
+  <app-producto-table #tabla></app-producto-table>
+  <app-bodega-form (bodegaCreada)="tabla.cargar()"></app-bodega-form>
+</main>
