@@ -12,11 +12,20 @@
     </thead>
     <tbody>
       @for (bodega of bodegas(); track bodega.id) {
-        @for (producto of bodega.productos ?? []; track producto.id) {
+        @if (bodega.productos && bodega.productos.length > 0) {
+          @for (producto of bodega.productos; track producto.id) {
+            <tr>
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.precio }}</td>
+              <td>{{ producto.cantidad }}</td>
+              <td>{{ bodega.nombre }}</td>
+            </tr>
+          }
+        } @else {
           <tr>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.precio }}</td>
-            <td>{{ producto.cantidad }}</td>
+            <td>Sin productos</td>
+            <td>-</td>
+            <td>-</td>
             <td>{{ bodega.nombre }}</td>
           </tr>
         }

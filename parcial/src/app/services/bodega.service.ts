@@ -8,6 +8,7 @@ export class BodegaService {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:8080/bodegas';
 
+  // para llamadas asíncronas
   listar(): Observable<Bodega[]> {
     return this.http.get<Bodega[]>(this.apiUrl);
   }
